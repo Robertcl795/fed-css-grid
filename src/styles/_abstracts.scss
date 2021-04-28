@@ -1,0 +1,22 @@
+
+@function multiple-box-shadow ($n) {
+    $value: '#{random(2000)}px #{random(2000)}px #FFF';
+    @for $i from 2 through $n {
+        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+    }
+  
+    @return unquote($value)
+}
+
+:global(a).navbar--link {
+    --highlight-01: #99ff00;
+    --font-color: #fff;
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 1.25rem;
+    transition: text-shadow 0.1s ease-in-out;
+    &:hover {
+        text-shadow: 0 0 10px var(--highlight-01);
+        --font-color: var(--highlight-01);
+    }
+}
