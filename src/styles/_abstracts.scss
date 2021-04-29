@@ -1,22 +1,36 @@
 
 @function multiple-box-shadow ($n) {
-    $value: '#{random(2000)}px #{random(2000)}px #FFF';
+    $value: '#{random(100)}vw #{random(100)}vh #FFF';
     @for $i from 2 through $n {
-        $value: '#{$value} , #{random(2000)}px #{random(2000)}px #FFF'
+        $value: '#{$value} , #{random(100)}vw #{random(100)}vh #FFF'
     }
   
     @return unquote($value)
 }
 
-:global(a).navbar--link {
-    --highlight-01: #99ff00;
-    --font-color: #fff;
+:global(a) {
     text-decoration: none;
-    color: var(--font-color);
     font-size: 1.25rem;
     transition: text-shadow 0.1s ease-in-out;
-    &:hover {
+    &.navbar--link:hover {
         text-shadow: 0 0 10px var(--highlight-01);
         --font-color: var(--highlight-01);
+    }
+    &.home-page--action {
+        width: 12rem;
+        height: 4rem;
+        border-radius: 1rem;
+        --font-color: hsl(0, 0%, 0%);
+        --background: hsl(0, 0%, 100%);
+        background-color: var(--background);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all ease-in-out 0.15s;
+        &:hover {
+            --background: hsl(0, 0%, 0%);
+            --font-color: hsl(0, 0%, 100%);
+            box-shadow: inset 0 0 3px var(--font-color);
+        }
     }
 }

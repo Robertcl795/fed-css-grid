@@ -1,9 +1,16 @@
 <script>
-    // your script goes here
+    import Page from "layout/Page.svelte";
+
+
 </script>
 
 <style>
     /* your styles go here */
 </style>
 
-<!-- markup (zero or more items) goes here -->
+<Page 
+    pageTitle="Characters Gallery" 
+    pageDescription="A curated list of all the caracters within the star wars universe."
+>
+
+</Page>

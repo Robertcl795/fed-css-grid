@@ -1,41 +1,54 @@
 <script>
-	import { Router } from 'svelte-routing';
-	import Navbar from './layout/Navbar.svelte';
-	import Footer from './layout/Footer.svelte';
-
+	import { Route, Router } from 'svelte-routing';
+	import Navbar from 'layout/Navbar.svelte';
+	import Footer from 'layout/Footer.svelte';
+	import Characters from 'routes/Characters.svelte';
+	import LightsaberLab from 'routes/LightsaberLab.svelte';
+	import Movies from 'routes/Movies.svelte';
+	import Ships from 'routes/Ships.svelte';
+	import Home from 'routes/Home.svelte';
 	export let url = "";
 </script>
 
-<main>
+<div class="background--container">
+	<div id="stars1"></div>
+	<div id="stars2"></div>
+	<div id="stars3"></div>
 	<Router url="{url}">
-		<div id="stars1"></div>
-		<div id="stars2"></div>
-		<div id="stars3"></div>
-		<Navbar class="main--navbar"/>
-		<section class="main--content">
-
-		</section>
-		<Footer class="main--footer"/>
+		<main>
+			<Navbar/>
+			<Route exact path="movies-timeline" component={Movies}/>
+			<Route exact path="characters" component={Characters}/>
+			<Route exact path="lightsaber-lab" component={LightsaberLab}/>
+			<Route exact path="ships-silo" component={Ships}/>
+			<Route exact path="/"><Home/></Route>
+			<Route path="*"><Home/></Route>
+			<Footer/>
+		</main>
 	</Router>
-</main>
+</div>
 
 <style type="text/scss">
 	@import './styles/main.scss';
 	main {
-		max-height: calc(100vh - 2rem);
-		margin: 1rem;
+		--container-height: calc(100vh - 2rem);
+		height: var(--container-height);
+		margin: 1rem 2rem;
+
 
 		display: grid;
 		grid-template-areas: "navbar" "page-content" "footer";
-		grid-template-columns: 1fr;
+		grid-template-rows: max-content 1fr max-content;
+
 		:global(main > .main--navbar) {
 			grid-area: navbar;
 		}
-		:global(main > .page--content) {
+		:global(main > .router-page--content) {
 			grid-area: page--content;
 		}
 		:global(main > .main--footer) {
 			grid-area: footer;
 		}
+
 	}
 </style>
