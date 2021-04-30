@@ -9,7 +9,7 @@
         align-items: center;
         > .navbar--links {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
         }
         img {
             height: 3rem;
@@ -19,7 +19,7 @@
 </style>
 
 <nav class="navbar--main" >
-    <Link class="navbar--link" to="/"><img src="assets/logo.png" alt="FED@IBM Logo"/></Link>
+    <Link class="navbar--link-main" to="/"><img src="assets/logo.png" alt="FED@IBM Logo"/></Link>
     <ul class="navbar--links">
         <li><Link class="navbar--link" to="/movies-timeline">Movies</Link></li>
         <li><Link class="navbar--link" to="/characters">Characters</Link></li>

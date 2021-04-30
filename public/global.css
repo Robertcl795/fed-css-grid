@@ -1,14 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
 @font-face {
 	font-family: "Death Star";
 	src: url('assets/deathstar.woff') format('woff2'),
         url('assets/deathstar.woff2') format('woff');
 }
 :root {
-    --highlight-01: hsl(84, 100%, 50%);
+    --light-01:     hsl(0, 0%, 100%);
+    --light-02:     hsl(0, 0%, 90%);
+
+    --highlight-01: hsl(84, 100%, 40%);
+    --highlight-02: hsl(45, 100%, 60%);
+    --highlight-03: hsl(00, 100%, 40%);
+    --highlight-04: hsl(183, 98%, 50%);
+
+    --dark-01:      hsl(0, 0%, 0%);
+    --dark-02:      hsl(0, 0%, 10%);
+	
 	--font-color: #fff;
 	--font-size: 1rem;
+	--font-weight: normal;
 	--font-family: "Space Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	--letter-spacing: normal;
 	--margins: inherit;
 }
 
@@ -30,8 +44,10 @@ body {
 * {
 	font-family: var(--font-family);
 	font-size: var(--font-size);
+	font-weight: var(--font-weight);
 	color: var(--font-color);
 	margin: var(--margins);
+	letter-spacing: var(--letter-spacing);
 }
 
 ul {

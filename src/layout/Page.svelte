@@ -16,7 +16,10 @@
             > .router-page--header__title {
                 --font-size: 3rem;
                 --font-family: "Death Star", "Space Grotesk", sans-serif;
-                --margins: 2rem 0 1rem 0;
+                --margins: 2rem 0 0.5rem 0;
+            }
+            > .router-page--header__descr {
+                --font-size: 1.25rem;
             }
         }
     }

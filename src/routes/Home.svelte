@@ -6,45 +6,38 @@ import { Link } from "svelte-routing";
 </script>
 
 <style type="text/scss">
-
     %home-page--styles {
-        > .home-page--title {
-            --font-size: 5rem;
+        > .home-page--header, > .home-page--crawl {
+            --font-color: hsl(0, 0%, 0%);
             --font-family: "Death Star", "Space Grotesk", sans-serif;
-            > span {
-                --font-family: "Space Grotesk";
+            --letter-spacing: 1px;
+            text-shadow:  
+                -1px -1px 0 var(--highlight-01),  
+                1px  -1px 0 var(--highlight-01),
+                -1px 1px 0 var(--highlight-01),
+                1px  1px 0 var(--highlight-01);
+        }
+        > .home-page--header {
+            --font-size: 3rem;
+        }
+        > .home-page--crawl {
+            --font-family: "Death Star", "Space Grotesk", sans-serif;
+            --font-size: 5rem;
+            > span:nth-child(2) {
+                --font-color: var(--highlight-01);
             }
-        }
-        > .home-page--subtitle {
-            --font-size: 2rem;
-            max-width: 35vw;
-        }
-        > .home-page--cover {
-            width: 50vw;
-            height: auto;
         }
     }
     %home-page--layout {
         display: grid;
-        grid-template-areas: 
-            "title cover" 
-            "subtitle cover"
-            "action cover";
-        gap: 0 2rem;
-        justify-content: space-between;
-        align-content: center;
-        > .home-page--title {
-            grid-area: title;
-            align-self: end;
-        }
-        > .home-page--subtitle {
-            grid-area: subtitle;
-        }
-        > .home-page--cover {
-            grid-area: cover;
-        }
-        :last-child {
-            grid-area: action;
+        grid-template-rows: [header] max-content [crawl] max-content [main-content] max-content;
+        align-content: space-around;
+        justify-items: center;
+        > .home-page--crawl {
+            display: grid;
+            grid-template-rows: repeat(3, max-content);
+            align-content: center;
+            justify-items: center;
         }
     }
     .home-page {
@@ -55,8 +48,13 @@ import { Link } from "svelte-routing";
 </style>
 
 <section class="home-page">
-    <h1 class="home-page--title">FED<span>@</span>IBM Hub</h1>
-    <p class="home-page--subtitle">An awesome place to know a little bit more about the Star Wars Universe</p>
-    <img class="home-page--cover" src="assets/cover.png" alt="May the 4th Cover">
-    <Link class="home-page--action" to="movies-timeline">Let's Go!</Link>
+    <h1 class="home-page--header">
+        FED@IBM Welcome to CSS: Beyond the Grid!
+    </h1>
+    <section class="home-page--crawl">
+        <span>MAY</span>
+        <span>THE 4TH</span>
+        <span>BE WITH YOU</span>
+    </section>
+    <Link class="home-page--action" to="movies">Let's Begin!</Link>
 </section>

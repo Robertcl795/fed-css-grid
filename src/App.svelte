@@ -35,7 +35,6 @@
 		height: var(--container-height);
 		margin: 1rem 2rem;
 
-
 		display: grid;
 		grid-template-areas: "navbar" "page-content" "footer";
 		grid-template-rows: max-content 1fr max-content;
