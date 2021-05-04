@@ -6,6 +6,9 @@
 </script>
 
 <style type="text/scss">
+    %characters-list--styles {
+        padding: 2rem 1rem;
+    }
     %character-item--styles {
         --character-content--padding: 0 1.5rem;
         background: hsl(0, 0%, 10%);
@@ -58,7 +61,6 @@
     }
 
     %characters-list--layout {
-        padding: 2rem 1rem;
         --character-item--max-width: 15rem;
         --character-list--gap: 1rem;
         display: grid;
@@ -73,8 +75,6 @@
         gap: 0.25rem;
         > header, > .character-item--details {
             display: grid;
-            // grid-template-columns: subgrid;
-            // grid-template-rows: subgrid;
             grid: subgrid / subgrid;
             align-items: center;
         }
@@ -99,6 +99,7 @@
 
     .characters-list {
         @extend %characters-list--layout;
+        @extend %characters-list--styles;
         > .character-item {
             @extend %character-item--layout;
             @extend %character-item--styles;

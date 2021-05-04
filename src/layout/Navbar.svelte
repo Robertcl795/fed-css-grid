@@ -23,7 +23,7 @@
     <ul class="navbar--links">
         <li><Link class="navbar--link" to="/movies-timeline">Movies</Link></li>
         <li><Link class="navbar--link" to="/characters">Characters</Link></li>
-        <li><Link class="navbar--link" to="/lightsaber-lab">Lightsaber Lab</Link></li>
+        <!-- <li><Link class="navbar--link" to="/lightsaber-lab">Lightsaber Lab</Link></li> -->
         <li><Link class="navbar--link" to="/ships-silo">Ships Gallery</Link></li>
     </ul>
 </nav>

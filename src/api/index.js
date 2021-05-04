@@ -13,7 +13,6 @@ export const getCharacters = ajax(`${apiURL}/people/`).pipe(
         .filter(character => character.name && character.created)
         .filter(({id}) => !["6","7","9"].includes(id))
     )),
-    tap(res => console.log(res)),
 );
 
 export const getMovies = ajax(`${apiURL}/films/`).pipe(
@@ -21,12 +20,15 @@ export const getMovies = ajax(`${apiURL}/films/`).pipe(
     pluck("results"),
     startWith([]),
     map(films => ([ ...films, ...newFilms])),
-    tap(res => console.log(res)),
 )
 
 export const getShips = ajax(`${apiURL}/starships`).pipe(
     pluck("response"),  
     pluck("results"),
     startWith([]),
-    tap(res => console.log(res)),
+    map(ships => (
+        ships.map(ship => ({ ...ship, id: ship && ship.url ? ship.url.replace(/\D/g, '') : "0" }))
+        .filter(ship => ship.name && ship.created)
+        .filter(({id}) => !["6","7","9"].includes(id))
+    )),
 )
