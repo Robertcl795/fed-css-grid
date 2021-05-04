@@ -49,12 +49,11 @@ import { Link } from "svelte-routing";
 
 <section class="home-page">
     <h1 class="home-page--header">
-        FED@IBM Welcome to CSS: Beyond the Grid!
+        FED@IBM WELCOME AND MAY THE <span>4TH</span> BE WITH YOU!
     </h1>
     <section class="home-page--crawl">
-        <span>MAY</span>
-        <span>THE 4TH</span>
-        <span>BE WITH YOU</span>
+        <span>CSS</span>
+        <span>BEYOND THE GRID</span>
     </section>
     <Link class="home-page--action" to="movies">Let's Begin!</Link>
 </section>

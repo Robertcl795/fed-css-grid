@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 @font-face {
@@ -11,12 +11,14 @@
     --light-02:     hsl(0, 0%, 90%);
 
     --highlight-01: hsl(84, 100%, 40%);
+    --highlight-01-dark: hsl(84, 100%, 20%);
     --highlight-02: hsl(45, 100%, 60%);
     --highlight-03: hsl(00, 100%, 40%);
     --highlight-04: hsl(183, 98%, 50%);
 
     --dark-01:      hsl(0, 0%, 0%);
     --dark-02:      hsl(0, 0%, 10%);
+    --dark-03:      hsl(0, 0%, 20%);
 	
 	--font-color: #fff;
 	--font-size: 1rem;
@@ -27,7 +29,7 @@
 }
 
 html {
-	background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+	background: hsl(230, 25%, 5%);
 }
 html, body {
 	position: relative;

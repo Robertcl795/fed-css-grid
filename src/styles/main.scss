@@ -1,9 +1,9 @@
 @import './abstracts';
 
 
-$shadows-small:  multiple-box-shadow(700);
-$shadows-medium: multiple-box-shadow(200);
-$shadows-big:    multiple-box-shadow(100);
+$shadows-small:  multiple-box-shadow(1000);
+$shadows-medium: multiple-box-shadow(400);
+$shadows-big:    multiple-box-shadow(200);
     
 #stars1 {
   width: 1px;
@@ -16,7 +16,7 @@ $shadows-big:    multiple-box-shadow(100);
     overflow: hidden;
     content: " ";
     position: absolute;
-    top: 100vh;
+    top: 300vh;
     width: 1px;
     height: 1px;
     background: transparent;
@@ -37,7 +37,7 @@ $shadows-big:    multiple-box-shadow(100);
     overflow: hidden;
     content: " ";
     position: absolute;
-    top: 100vh;
+    top: 300vh;
     width: 2px;
     height: 2px;
     background: transparent;
@@ -57,7 +57,7 @@ $shadows-big:    multiple-box-shadow(100);
     overflow: hidden;
     content: " ";
     position: absolute;
-    top: 100vh;
+    top: 300vh;
     width: 3px;
     height: 3px;
     background: transparent;
@@ -72,6 +72,6 @@ $shadows-big:    multiple-box-shadow(100);
         transform: translateY(0px)
     }
     to {
-        transform: translateY(-100vh)
+        transform: translateY(-300vh)
     }
 }
